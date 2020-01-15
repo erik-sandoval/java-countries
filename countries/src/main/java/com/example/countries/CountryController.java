@@ -26,4 +26,13 @@ public class CountryController {
 
         return new ResponseEntity<>(tempList, HttpStatus.OK);
     }
+
+    @GetMapping(value = "/size/{number}", produces = {"application/json"})
+    public ResponseEntity<?> getCountryWithPopulationHigherThan(@PathVariable int number){
+        ArrayList<Country> tempList = CountriesApplication.countryList.findCountries(c -> c.getPopulation() >= number);
+
+        tempList.sort((c1, c2) -> c1.getCountryName().compareToIgnoreCase(c2.getCountryName()));
+
+        return new ResponseEntity<>(tempList, HttpStatus.OK);
+    }
 }
