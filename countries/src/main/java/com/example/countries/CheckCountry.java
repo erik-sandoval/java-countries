@@ -1,5 +1,5 @@
 package com.example.countries;
 
-public interface CheckEmployee {
+public interface CheckCountry {
     boolean test(Country country);
 }
