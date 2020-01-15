@@ -229,4 +229,30 @@ public class CountryList {
         }
         return null;
     }
+
+    public Country getLowestPopulation(){
+
+        Country minPopCountry = countryList.get(0);
+
+        for (Country c : countryList){
+
+            if (c.getPopulation() < minPopCountry.getPopulation()) {
+                minPopCountry = c;
+            }
+        }
+        return minPopCountry;
+    }
+
+    public Country getHighestPopulation(){
+
+        Country highPopCountry = countryList.get(0);
+
+        for (Country c : countryList){
+
+            if (c.getPopulation() > highPopCountry.getPopulation()) {
+                highPopCountry = c;
+            }
+        }
+        return highPopCountry;
+    }
 }
