@@ -3,7 +3,7 @@ package com.example.countries;
 import java.util.ArrayList;
 
 public class CountryList {
-    public ArrayList<Country> countryList = new ArrayList<Country>();
+    public ArrayList<Country> countryList = new ArrayList<>();
 
     public CountryList(){
         countryList.add(new Country("China",1420062022,9388211,39));
@@ -211,7 +211,7 @@ public class CountryList {
 
     public ArrayList<Country> findCountries(CheckCountry tester){
 
-        ArrayList<Country> tempList = new ArrayList<Country>();
+        ArrayList<Country> tempList = new ArrayList<>();
 
         for (Country c : countryList){
             if (tester.test(c)){
